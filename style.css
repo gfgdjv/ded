@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.section {
+  height: 100vh;
+}
+.main {
+  background-image: url(img/winter.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(236, 105, 208, 0.2);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.about {
+  width: 75%;
+  display: flex;
+  margin-bottom: 30px;
+  z-index: 100;
+}
+
+@keyframes run {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100px);
+    color: #ebcccf;
+  }
+  
+}
+
+.about__title {
+  margin: 0;
+  animation: run 2s infinite alternate;
+}
+
+.about__avatar {
+  height: 250px;
+  width: 250px;
+  border: 5px solid rgb(27, 27, 29);
+  border-radius: 50%;
+  background-image: url(e51340a9ea1e23e8dfcfc51919c43873f2d13451_hq.gif) ; 
+  background-position: center;
+  background-size: cover;
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.about__avatar:hover {
+transform: rotate(20deg);
+transition: 1s;
+}
+
+.about__info {
+  background-color: rgba(236, 142, 142, 0.9);
+  border-radius: 20px;
+  border: 5px solid rgb(15, 15, 15);
+  padding: 20px;
+  font-family: 'Pacifico', cursive;
+}
+
+.button {
+  color: rgb(247, 204, 204);
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: rgb(17, 17, 17);
+  display: inline-block;
+  padding: 15px;
+  border-radius: 10px;
+  z-index: 100;
+  font-family: 'Lobster', cursive;
+  position: relative;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  
+} 
+
+.button:hover {
+  box-shadow: 0 10px 20px rgb(179, 88, 88);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.poem {
+  width: 100%;
+  background-image: url(img/12248498171f071f16129.jpg);
+  background-size: cover;
+  padding-top: 50px;
+}
+
+.poem_title {
+  margin-top: 0;
+  text-align: center;
+  color: lightgrey;
+}
+
+.poem__list {
+  display: flex;
+  justify-content: center;
+}
+
+.poem__item {
+  width: 300px;
+  min-height: 580px;
+  background-color: rgb(215, 250, 220);
+  border-radius: 5px;
+  margin-right: 30px;
+  border: 2px solid transparent;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+}
+
+.poem__item:last-child {
+  margin-right: 0;
+}
+
+.poem__item:hover {
+  border-color: yellowgreen;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+
+}
+
+.poem__img-wrap {
+  width: 100%;
+  height: 300px;
+}
+
+.poem__img {
+  height: 100%;
+}
+
+.msg {
+  background-image: url(img/noviy-god100.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction:column ;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+@keyframes walk {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+.msg__title {
+  margin-bottom: 68px;
+  text-transform: uppercase;
+  animation: walk 2s infinite alternate;
+}
+
+.form {
+ width: 600px;
+ background-image: url(img/noviy-god.jpg);
+ padding: 40px 40px 65px;
+ background-position: right top;
+background-size: cover;
+border-radius: 10px;
+position: relative;
+}
+
+.form__content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.form__row {
+  margin-bottom: 10px;
+
+}
+
+.form__title-input {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.form__input, .form__message {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.form__message {
+  resize: none;
+  height: 200px;
+}
+
+.form__button-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.form__submit {
+  padding: 10px 20px ;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #f82137;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+}
+
+.form__submit:hover {
+  background-color: #663a40;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+@keyframes jump {
+  0% {
+    transform: translateZ(0);
+  }
+  100% {
+    transform: translateX(100px);
+  }
+}
+
+.form__img-wrap {
+  height: 200px;
+  position: absolute;
+  top: -158px;
+  right: 0;
+  animation: jump 2s infinite alternate;
+}
+
+.form__img {
+  height: 100%;
+  
+}
